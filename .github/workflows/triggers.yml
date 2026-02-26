@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    -cron: '* * 26 * *'
+    - cron: '* * 26 * *'
 
 jobs: 
   hola-mundo:
