@@ -52,7 +52,7 @@ _Aprende los conceptos básicos para crear tu primer flujo de CI/CD para tus pro
   TBD-step-1-notes.
 -->
 
-<details id=1 open>
+<details id=1>
 <summary><h2>Paso 1: Crea tu primer workflow file</h2></summary>
 
 _¡Bienvenido al "Curso Básico de GitHub Actions"! :wave:_
@@ -227,7 +227,7 @@ Ahora que conoces los componentes básicos de un workflow en GitHub Actions pode
   TBD-step-3-notes.
 -->
 
-<details id=3>
+<details id=3 open>
 <summary><h2>Paso 3: Aprende a usar Expresiones</h2></summary>
 
 _¡Buen trabajo usando los distintos eventos para lanzar nuevos workflows! :sparkles:_
