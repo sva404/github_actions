@@ -1,15 +1,13 @@
 name: triggers
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
       - 'releases/**'
     paths:
       '**.cpp'
-
-  workflow_dispatch:
-
   schedule:
     - cron: '* * 26 * *'
 
