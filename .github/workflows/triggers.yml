@@ -1,0 +1,27 @@
+name: triggers
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+    paths:
+      '**.cpp'
+
+  workflow_dispatch:
+
+  schedule:
+    -cron: '* * 26 * *'
+
+on: push
+jobs: 
+  hola-mundo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: imprimir hola github
+        run: echo "hola github"
