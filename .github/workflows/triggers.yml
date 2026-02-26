@@ -13,7 +13,6 @@ on:
   schedule:
     -cron: '* * 26 * *'
 
-on: push
 jobs: 
   hola-mundo:
     runs-on: ubuntu-latest
