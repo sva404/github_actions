@@ -1,19 +1,16 @@
 name: triggers
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
       - 'releases/**'
     paths:
       '**.cpp'
-
-  workflow_dispatch:
-
   schedule:
-    -cron: '* * 26 * *'
+    - cron: '* * 26 * *'
 
-on: push
 jobs: 
   hola-mundo:
     runs-on: ubuntu-latest
@@ -25,8 +22,3 @@ jobs:
 
       - name: imprimir hola github
         run: echo "hola github"
-
-
-          
-          
-
