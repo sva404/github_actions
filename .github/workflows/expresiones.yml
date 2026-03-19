@@ -1,0 +1,61 @@
+name: expresiones
+# Controls when the workflow will run
+on: 
+workflow_dispatch:
+  inputs:
+    numero1:
+      description: 'Numero 1'
+      required: true
+      type: integer
+    numero2:
+      description: 'Numero 2'
+      required: true
+      type: integer
+    operacion:
+      description: 'Operacion'
+      required: true
+      default: 'Mayor'
+      type: string
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  mayor-1:
+    if: ${{inputs.operacion == 'Mayor' && inputs.numero1 > inputs.numero2}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: comparar
+        run: echo True
+
+  mayor-2:
+    if: ${{inputs.operacion == 'Mayor' && inputs.numero1 < inputs.numero2}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: comparar
+        run: echo False
+
+  mayor-2:
+    if: ${{inputs.operacion == 'Menor' && inputs.numero1 < inputs.numero2}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: comparar
+        run: echo True
+
+  mayor-2:
+    if: ${{inputs.operacion == 'Menor' && inputs.numero1 > inputs.numero2}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: comparar
+        run: echo False
+
